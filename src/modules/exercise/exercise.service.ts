@@ -34,7 +34,7 @@ export class ExerciseService {
     const gifData = fs.readFileSync(pathFile);
 
     const thumbnailPath = pathFile.replace('.gif', '.png');
-    await sharp(gifData, { pages: 1 }).png().toFile(thumbnailPath);
+    // await sharp(gifData, { pages: 1 }).png().toFile(thumbnailPath);
 
     const videoUrl = await this.cloudService.uploadImage(pathFile);
     const thumbnailUrl = await this.cloudService.uploadImage(thumbnailPath);
@@ -98,7 +98,7 @@ export class ExerciseService {
       const gifData = fs.readFileSync(pathFile);
 
       const thumbnailPath = pathFile.replace('.gif', '.png');
-      await sharp(gifData, { pages: 1 }).png().toFile(thumbnailPath);
+      // await sharp(gifData, { pages: 1 }).png().toFile(thumbnailPath);
 
       const videoUrl = await this.cloudService.uploadImage(pathFile);
       const thumbnailUrl = await this.cloudService.uploadImage(thumbnailPath);
